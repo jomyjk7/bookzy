@@ -13,6 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>bookzywebapp</name>
 	<description>Demo project for Spring Boot</description>
+	<packaging>war</packaging>	
 	<properties>
 		<java.version>11</java.version>
 
@@ -55,6 +56,15 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+
+               		        <artifactId>maven-war-plugin</artifactId>
+                                <version>2.4</version>
+                                <configuration>
+                                <warSourceDirectory>WebContent</warSourceDirectory>
+                                <failOnMissingWebXml>false</failOnMissingWebXml>
+                                </configuration>
+                       </plugin>	
 		</plugins>
 	</build>
 
